@@ -1,0 +1,32 @@
+import { Component, OnInit } from '@angular/core';
+import {AuthService} from "../../Services/auth.service";
+import {Router} from "@angular/router";
+import {TokenService} from "../../Services/token.service";
+
+@Component({
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
+})
+export class NavbarComponent implements OnInit {
+
+  public LoggedIn: boolean;
+
+
+  constructor(
+    private Auth: AuthService,
+    private router: Router,
+    private Token: TokenService
+  ) { }
+
+  ngOnInit(): void {
+    this.Auth.AuthStatus.subscribe(value => this.LoggedIn=value);
+  }
+
+  logout(event: MouseEvent){
+    event.preventDefault();
+    this.Token.remove();
+    this.Auth.ChangeAuthStatus(false);
+    this.router.navigateByUrl('/login');
+  }
+}
