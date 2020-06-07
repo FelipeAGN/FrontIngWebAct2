@@ -7,9 +7,17 @@ import {ResponseResetComponent} from "./components/password/response-reset/respo
 import {BeforeLoginService} from "./Services/before-login.service";
 import {AfterLoginService} from "./Services/after-login.service";
 import {RequestResetComponent} from "./components/password/request-reset/request-reset.component";
+import {IndexComponent} from "./components/index/index.component";
 
 
 const appRoutes: Routes = [
+
+  {
+    path:'',redirectTo:'/inicio', pathMatch:'full'
+  },
+  {
+    path:'inicio', component:IndexComponent
+  },
   {
     path: 'login', component:LoginComponent,
     canActivate: [BeforeLoginService]
