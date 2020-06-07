@@ -1,13 +1,15 @@
 <div class="mt-4 col-8 offset-2">
   <div class="card">
-    <div class="card-header"> Register Here please!</div>
+    <div class="card-header">
+      <h2 style="text-align: center;font-size: 2rem;">Regístrate acá</h2>
+    </div>
     <div class="card-body">
       <form #signupForm=ngForm (ngSubmit)="onSubmit()">
 
         <div class="form-group row">
           <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
           <div class="col-sm-10">
-            <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Ingresa tu email" [(ngModel)]="form.email"
+            <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Ingresar Email" [(ngModel)]="form.email"
                    required>
             <div class="alert alert-danger" [hidden]="!error.email">{{error.email}} </div>
 
@@ -15,9 +17,9 @@
         </div>
 
         <div class="form-group row">
-          <label for="inputName3" class="col-sm-2 col-form-label">Nombre Completo</label>
+          <label for="inputName3" class="col-sm-2 col-form-label">Nombre</label>
           <div class="col-sm-10">
-            <input type="text" name="name" class="form-control" id="inputName3" placeholder="Ingresa tu Nombre" [(ngModel)]="form.name"
+            <input type="text" name="name" class="form-control" id="inputName3" placeholder="Ingresar Nombre Completo" [(ngModel)]="form.name"
                    required>
             <div class="alert alert-danger" [hidden]="!error.name">{{error.name}} </div>
 
@@ -27,7 +29,7 @@
         <div class="form-group row">
           <label for="inputPassword3" class="col-sm-2 col-form-label">Contraseña</label>
           <div class="col-sm-10">
-            <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password" [(ngModel)]="form.password"
+            <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Contraseña" [(ngModel)]="form.password"
                    required>
             <div class="alert alert-danger" [hidden]="!error.password">{{error.password}} </div>
 
@@ -37,7 +39,7 @@
         <div class="form-group row">
           <label for="inputPasswordConfirmation3" class="col-sm-2 col-form-label">Confirmar Contraseña</label>
           <div class="col-sm-10">
-            <input type="password" name="password_confirmation" class="form-control" id="inputPasswordConfirmation3" placeholder="Password Confirmation" [(ngModel)]="form.password_confirmation"
+            <input type="password" name="password_confirmation" class="form-control" id="inputPasswordConfirmation3" placeholder="Confirmar Contraseña" [(ngModel)]="form.password_confirmation"
                    required>
             <div class="alert alert-danger" [hidden]="!error.password_confirmation">{{error.password_confirmation}} </div>
 

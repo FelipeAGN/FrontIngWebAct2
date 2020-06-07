@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {JarwisService} from "../../../Services/jarwis.service";
+import {SnotifyService} from "ng-snotify";
 
 @Component({
   selector: 'app-response-reset',
@@ -9,7 +10,9 @@ import {JarwisService} from "../../../Services/jarwis.service";
 })
 export class ResponseResetComponent implements OnInit {
 
-  public error:[];
+  public error={email:'', password: '', password_confirmation: ''};
+
+
   public form ={
     email: null,
     password:null,
@@ -21,6 +24,7 @@ export class ResponseResetComponent implements OnInit {
     private route:ActivatedRoute,
     private Jarwis:JarwisService,
     private router:Router,
+    private Notify: SnotifyService
   ) {
     route.queryParams.subscribe(params=> {
         this.form.resetToken=params['token']
@@ -30,16 +34,25 @@ export class ResponseResetComponent implements OnInit {
   onSubmit(){
     this.Jarwis.changePassword(this.form).subscribe(
       data=> this.handleResponse(data),
-      error => console.log(error)
+      error => this.handleError(error)
     );
   }
 
   handleResponse(data){
-    this.router.navigateByUrl('/login');
+
+    let _router = this.router;
+
+    this.Notify.confirm('Listo!, Ahora haz click en el botón e ingresa tus nuevas credenciales!', {buttons:[{
+        text: 'Ingresar' ,action: toster=>{
+          _router.navigateByUrl('/login'), this.Notify.remove(toster.id)
+        }
+      },
+      ]
+    });
   }
 
   handleError(error){
-
+    this.error = error.error.errors;
   }
 
   ngOnInit(): void {

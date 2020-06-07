@@ -1,12 +1,42 @@
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand">Navbar</a>
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Home
+    <fa-icon [icon]="faHome" [styles]="{'color':'white'}"></fa-icon>
+  </a>
+
 
   <div>
-    <a class="navbar-brand" routerLink="profile" *ngIf="LoggedIn">Perfil</a>
-    <a class="navbar-brand" routerLink="login" *ngIf="!LoggedIn">Ingresar</a>
-    <a class="navbar-brand" href="#" (click)="logout($event)" *ngIf="LoggedIn">Salir</a>
 
-    <a class="navbar-brand" routerLink="signup" *ngIf="!LoggedIn">Regístrate</a>
+    <a class="navbar-brand" href="#">
+      <fa-icon [icon]="faBookmark" [styles]="{'color':'white'}"></fa-icon>
+      Artículos</a>
+
+    <a class="navbar-brand" routerLink="profile" *ngIf="LoggedIn">
+      <fa-icon [icon]="faPlusCircle" [styles]="{'color':'white'}"></fa-icon>
+      Nuevo Artículo</a>
+
+    <a class="navbar-brand" routerLink="profile" *ngIf="LoggedIn">
+      <fa-icon [icon]="faUser" [styles]="{'color':'white'}"></fa-icon>
+      Mi Perfil</a>
+
+    <a class="navbar-brand" routerLink="login" *ngIf="!LoggedIn">
+      <fa-icon [icon]="faSignIn" [styles]="{'color':'white'}"></fa-icon>
+      Ingresar</a>
+
+
+    <a class="navbar-brand" href="#" (click)="logout($event)" *ngIf="LoggedIn">
+      <fa-icon [icon]="faSignOut" [styles]="{'color':'white'}"></fa-icon>
+      Salir</a>
+
+    <a class="navbar-brand" routerLink="signup" *ngIf="!LoggedIn">
+      <fa-icon [icon]="faUserPlus" [styles]="{'color':'white'}"></fa-icon>
+      Regístrate</a>
+
   </div>
+
+  <div><form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form></div>
+
 
 </nav>

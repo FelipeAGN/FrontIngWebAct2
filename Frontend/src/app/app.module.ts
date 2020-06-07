@@ -17,6 +17,11 @@ import { AuthService} from "./Services/auth.service";
 import {BeforeLoginService} from "./Services/before-login.service";
 import {AfterLoginService} from "./Services/after-login.service";
 import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
+import { FooterComponent } from './components/footer/footer.component';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -27,13 +32,15 @@ import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
     ProfileComponent,
     RequestResetComponent,
     ResponseResetComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    SnotifyModule
+    SnotifyModule,
+    FontAwesomeModule
   ],
   providers: [{provide: 'SnotifyToastConfig', useValue: ToastDefaults},SnotifyService,JarwisService, TokenService, AuthService, BeforeLoginService, AfterLoginService],
   bootstrap: [AppComponent]
