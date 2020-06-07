@@ -4,7 +4,8 @@ import {Router} from "@angular/router";
 import {TokenService} from "../../Services/token.service";
 import {faCoffee, faHome,faSignInAlt, faUser,faSignOutAlt, faPlusSquare,faUserPlus, faBookmark} from "@fortawesome/free-solid-svg-icons";
 import { $ } from 'protractor';
-import { AppComponent } from 'src/app/app.component';
+import { darkModeFooter } from "../footer/footer.component"
+ 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -48,11 +49,14 @@ export class NavbarComponent implements OnInit {
     document.querySelector('#barraTitulo').classList.toggle('bg-light');
   }
 
+  
+
   darkMode(){
     document.head.classList.toggle('dark');
     document.body.classList.toggle('dark');
     document.querySelector('#switch').classList.toggle('active');
     this.darkModeNavbar();
+    darkModeFooter();
   }
 
   tamano=100
