@@ -2,13 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../../Services/auth.service";
 import {Router} from "@angular/router";
 import {TokenService} from "../../Services/token.service";
-
+import {faCoffee, faHome,faSignInAlt, faUser,faSignOutAlt, faPlusSquare,faUserPlus, faBookmark} from "@fortawesome/free-solid-svg-icons";
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
+  faCoffee = faCoffee;
+  faHome= faHome;
+  faSignIn=faSignInAlt;
+  faUser =faUser;
+  faSignOut= faSignOutAlt;
+  faPlusCircle= faPlusSquare;
+  faUserPlus = faUserPlus;
+  faBookmark = faBookmark;
 
   public LoggedIn: boolean;
 
