@@ -1,7 +1,13 @@
-.dark{
-  background-color: white;
-  color: black;
+/*CAbecera*/
+
+fa-icon{
+  color: white;
 }
+
+.dark fa-icon{
+  color:black;
+}
+
 .divisor{
   color: azure;
   padding-right: 2px;
@@ -63,6 +69,10 @@
   outline: none;
   margin: 1px 5px 1px 1px;
   float: right;
+}
+.dark .zoom{
+  border: solid;
+  border-color: black;
 }
 
 

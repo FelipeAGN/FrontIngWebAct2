@@ -8,12 +8,14 @@
 .ng-valid:not(form){
   border-right: 10px solid green;
 }
-
+.cuerpo{
+  background-color: #14181c;
+}
 head.dark{
-  background-color: black;
-  color: white;
+  background-color:white;
+  color:black;
 }
 body.dark{
-  background-color: black;
-  color: white;
+  background-color:white;
+  color: black;
 }

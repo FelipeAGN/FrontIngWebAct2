@@ -1,33 +1,33 @@
-<nav class="navbar navbar-dark bg-dark barraTitulo">
+<nav class="navbar navbar-dark bg-dark" id="barraTitulo">
   <a class="navbar-brand" href="#">Home
-    <fa-icon [icon]="faHome" [styles]="{'color':'white'}"></fa-icon>
+    <fa-icon [icon]="faHome"></fa-icon>
   </a>
 
   <div>
 
     <a class="navbar-brand" href="#">
-      <fa-icon [icon]="faBookmark" [styles]="{'color':'white'}"></fa-icon>
+      <fa-icon [icon]="faBookmark"></fa-icon>
       Artículos</a>
 
     <a class="navbar-brand" routerLink="profile" *ngIf="LoggedIn">
-      <fa-icon [icon]="faPlusCircle" [styles]="{'color':'white'}"></fa-icon>
+      <fa-icon [icon]="faPlusCircle"></fa-icon>
       Nuevo Artículo</a>
 
     <a class="navbar-brand" routerLink="profile" *ngIf="LoggedIn">
-      <fa-icon [icon]="faUser" [styles]="{'color':'white'}"></fa-icon>
+      <fa-icon [icon]="faUser"></fa-icon>
       Mi Perfil</a>
 
     <a class="navbar-brand" routerLink="login" *ngIf="!LoggedIn">
-      <fa-icon [icon]="faSignIn" [styles]="{'color':'white'}"></fa-icon>
+      <fa-icon [icon]="faSignIn"></fa-icon>
       Ingresar</a>
 
 
     <a class="navbar-brand" href="#" (click)="logout($event)" *ngIf="LoggedIn">
-      <fa-icon [icon]="faSignOut" [styles]="{'color':'white'}"></fa-icon>
+      <fa-icon [icon]="faSignOut"></fa-icon>
       Salir</a>
 
     <a class="navbar-brand" routerLink="signup" *ngIf="!LoggedIn">
-      <fa-icon [icon]="faUserPlus" [styles]="{'color':'white'}"></fa-icon>
+      <fa-icon [icon]="faUserPlus"></fa-icon>
       Regístrate</a>
     <a class="navbar-brand zo">
       <button class="zoom"> 

@@ -4,6 +4,7 @@ import {Router} from "@angular/router";
 import {TokenService} from "../../Services/token.service";
 import {faCoffee, faHome,faSignInAlt, faUser,faSignOutAlt, faPlusSquare,faUserPlus, faBookmark} from "@fortawesome/free-solid-svg-icons";
 import { $ } from 'protractor';
+import { AppComponent } from 'src/app/app.component';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -39,11 +40,21 @@ export class NavbarComponent implements OnInit {
     this.router.navigateByUrl('/login');
   }
 
+  darkModeNavbar(){
+    document.querySelector('#barraTitulo').classList.toggle('navbar-dark')
+    document.querySelector('#barraTitulo').classList.toggle('bg-dark');
+    document.querySelector('#barraTitulo').classList.toggle('dark');
+    document.querySelector('#barraTitulo').classList.toggle('navbar-light');
+    document.querySelector('#barraTitulo').classList.toggle('bg-light');
+  }
+
   darkMode(){
     document.head.classList.toggle('dark');
     document.body.classList.toggle('dark');
     document.querySelector('#switch').classList.toggle('active');
+    this.darkModeNavbar();
   }
+
   tamano=100
   zoomPlus(){
     var cuerpo = document.getElementsByTagName('body')[0];
