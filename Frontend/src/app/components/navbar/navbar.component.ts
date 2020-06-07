@@ -3,6 +3,7 @@ import {AuthService} from "../../Services/auth.service";
 import {Router} from "@angular/router";
 import {TokenService} from "../../Services/token.service";
 import {faCoffee, faHome,faSignInAlt, faUser,faSignOutAlt, faPlusSquare,faUserPlus, faBookmark} from "@fortawesome/free-solid-svg-icons";
+import { $ } from 'protractor';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -36,6 +37,27 @@ export class NavbarComponent implements OnInit {
     this.Token.remove();
     this.Auth.ChangeAuthStatus(false);
     this.router.navigateByUrl('/login');
+  }
+
+  darkMode(){
+    document.head.classList.toggle('dark');
+    document.body.classList.toggle('dark');
+    document.querySelector('#switch').classList.toggle('active');
+  }
+  tamano=100
+  zoomPlus(){
+    var cuerpo = document.getElementsByTagName('body')[0];
+    var suma = this.tamano + 5;
+    this.tamano = suma; 
+    var aumento = suma.toString() + "%";  
+    cuerpo.style.fontSize= aumento;
+  }
+  zoomMinus(){
+    var cuerpo = document.getElementsByTagName('body')[0];
+    var suma = this.tamano - 5;
+    this.tamano = suma; 
+    var aumento = suma.toString() + "%";  
+    cuerpo.style.fontSize= aumento;
   }
 
   

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-dark bg-dark barraTitulo">
   <a class="navbar-brand" href="#">Home
     <fa-icon [icon]="faHome" [styles]="{'color':'white'}"></fa-icon>
   </a>
@@ -32,12 +32,12 @@
       Regístrate</a>
     <a class="navbar-brand zo">
       <button class="zoom"> 
-        <span><i class="fas fa-plus" ></i></span> /
-        <span><i class="fas fa-minus"></i></span>
+        <span (click)="zoomPlus()"><i class="fas fa-plus" ></i></span> /
+        <span (click)="zoomMinus()"><i class="fas fa-minus"></i></span>
       </button>Zoom</a>
 
     <a class="navbar-brand sw" >
-    <button class="switch" id="switch">
+    <button class="switch" id="switch" (click)="darkMode()">
       <span><i class="fas fa-sun"></i></span>"
       <span><i class="fas fa-moon"></i></span>
     </button></a>

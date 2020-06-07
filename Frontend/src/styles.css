@@ -8,3 +8,12 @@
 .ng-valid:not(form){
   border-right: 10px solid green;
 }
+
+head.dark{
+  background-color: black;
+  color: white;
+}
+body.dark{
+  background-color: black;
+  color: white;
+}
