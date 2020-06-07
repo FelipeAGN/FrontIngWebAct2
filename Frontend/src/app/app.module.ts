@@ -21,6 +21,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { IndexComponent } from './components/index/index.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     RequestResetComponent,
     ResponseResetComponent,
     FooterComponent,
+    IndexComponent,
   ],
   imports: [
     BrowserModule,
