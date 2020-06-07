@@ -37,10 +37,6 @@ export class NavbarComponent implements OnInit {
     this.Auth.ChangeAuthStatus(false);
     this.router.navigateByUrl('/login');
   }
-  zoomPlus(event:MouseEvent){
-    let cuerpo=document.getElementsByTagName('body')[0];
-    cuerpo.style.fontSize= "150%";
-  }
 
   
 }
