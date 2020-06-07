@@ -3,3 +3,63 @@
   padding-right: 2px;
   padding-left: 2px;
 }
+
+/*----Switch----*/
+.sw{
+  display: inline-flex;
+}
+
+.switch{
+  background: rgb(59, 79, 145);
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  margin: 3px 5px 5px 5px;
+  float: right;
+}
+.switch::after{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #F1F1F1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: .3s ease all;
+  box-shadow: 0 0 2px 2px ;
+}
+.switch.active{
+  background: orange;
+  color: #000;
+}
+.switch.active::after{
+  right:0;
+  left: unset;
+  transition: 20s ease all;
+}
+
+/*Zoom*/
+.zo{
+  display: inline-flex;
+}
+
+.zoom{
+  background: rgb(255, 255, 255);
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  margin: 1px 5px 1px 1px;
+  float: right;
+}
+
+
+
