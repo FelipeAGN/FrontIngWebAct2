@@ -52,7 +52,6 @@ export class NavbarComponent implements OnInit {
     document.querySelector('#switch').classList.toggle('active');
     document.head.classList.toggle('dark');
     document.body.classList.toggle('dark');
-    console.log(this.router);
     this.darkModeNavbar();
     darkModeFooter();   
   }
