@@ -4,8 +4,7 @@ import {Router} from "@angular/router";
 import {TokenService} from "../../Services/token.service";
 import {faCoffee, faHome,faSignInAlt, faUser,faSignOutAlt, faPlusSquare,faUserPlus, faBookmark} from "@fortawesome/free-solid-svg-icons";
 import { darkModeFooter } from "../footer/footer.component";
-import { LoginComponent } from "../login/login.component"
-import { darkModeLogin } from "../login/login.component" ;
+import { darkSign } from "../signup/signup.component" ;
  
 @Component({
   selector: 'app-navbar',
@@ -56,6 +55,7 @@ export class NavbarComponent implements OnInit {
     document.body.classList.toggle('dark');
     this.darkModeNavbar();
     darkModeFooter();   
+    darkSign();
   }
 
   tamano=100
@@ -77,3 +77,13 @@ export class NavbarComponent implements OnInit {
   
 }
 
+export function modoActivo(){
+  for(var i=0;i < document.querySelector('#switch').classList.length;i++ ){
+    if (document.querySelector('#switch').classList[i] == 'active') {
+      console.log("hola")
+      return true;
+    }else{
+      return false;
+    }
+  }
+}

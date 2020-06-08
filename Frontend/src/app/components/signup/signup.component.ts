@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {JarwisService} from "../../Services/jarwis.service";
 import {TokenService} from "../../Services/token.service";
 import {Router} from "@angular/router";
+import { modoActivo } from "../navbar/navbar.component"
 
 
 @Component({
@@ -46,4 +47,9 @@ export class SignupComponent implements OnInit {
   ErrorHandler(error){
     this.error= error.error.errors;
   }
+}
+
+export function darkSign() {
+  document.querySelector('#signDark').classList.toggle('dark');
+  document.querySelector('#signDark').classList.toggle('bg-dark');
 }
