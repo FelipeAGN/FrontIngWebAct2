@@ -8,3 +8,23 @@
 .ng-valid:not(form){
   border-right: 10px solid green;
 }
+.cuerpo{
+  background-color: #14181c;
+}
+
+body.dark{
+  background-color:#D7DCD5;
+  color: black;
+}
+
+body.dark app-login .card#loginDark{
+  background-color: white !important;
+  color: black;
+  font-weight: bold;
+}
+
+body.dark app-signup .card#signDark{
+  background-color: white !important;
+  color: black;
+  font-weight: bold;
+}

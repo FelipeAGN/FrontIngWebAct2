@@ -10,16 +10,18 @@ import {Router} from "@angular/router";
   styleUrls: ['./signup.component.css']
 })
 
+
 export class SignupComponent implements OnInit {
 
   constructor
   (
     private Jarwis: JarwisService,
     private Token: TokenService,
-    private router: Router
+    private router: Router,
   ){}
 
   public error={email:'', name:'', password: '', password_confirmation: ''};
+ 
 
   public form = {
     email: null,
@@ -46,5 +48,8 @@ export class SignupComponent implements OnInit {
   ErrorHandler(error){
     this.error= error.error.errors;
   }
-
+  
 }
+
+
+

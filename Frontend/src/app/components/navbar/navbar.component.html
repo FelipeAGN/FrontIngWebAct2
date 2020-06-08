@@ -1,48 +1,59 @@
-<nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Home
-    <fa-icon [icon]="faHome" [styles]="{'color':'white'}"></fa-icon>
+<nav class="navbar navbar-dark bg-dark" id="barraTitulo">
+  <a class="navbar-brand" routerLink="inicio">Home
+    <fa-icon [icon]="faHome"></fa-icon>
   </a>
 
   <div>
-    <a class="navbar-brand" href="#">
-      <fa-icon [icon]="faBookmark" [styles]="{'color':'white'}"></fa-icon>
+
+
+    <a class="navbar-brand" routerLink="inicio">
+      <fa-icon [icon]="faBookmark"></fa-icon>
       Artículos</a>
 
     <a class="navbar-brand" routerLink="profile" *ngIf="LoggedIn">
-      <fa-icon [icon]="faPlusCircle" [styles]="{'color':'white'}"></fa-icon>
+      <fa-icon [icon]="faPlusCircle"></fa-icon>
       Nuevo Artículo</a>
 
     <a class="navbar-brand" routerLink="profile" *ngIf="LoggedIn">
-      <fa-icon [icon]="faUser" [styles]="{'color':'white'}"></fa-icon>
+      <fa-icon [icon]="faUser"></fa-icon>
       Mi Perfil</a>
 
     <a class="navbar-brand" routerLink="login" *ngIf="!LoggedIn">
-      <fa-icon [icon]="faSignIn" [styles]="{'color':'white'}"></fa-icon>
+      <fa-icon [icon]="faSignIn"></fa-icon>
       Ingresar</a>
 
 
     <a class="navbar-brand" href="#" (click)="logout($event)" *ngIf="LoggedIn">
-      <fa-icon [icon]="faSignOut" [styles]="{'color':'white'}"></fa-icon>
+      <fa-icon [icon]="faSignOut"></fa-icon>
       Salir</a>
 
     <a class="navbar-brand" routerLink="signup" *ngIf="!LoggedIn">
-      <fa-icon [icon]="faUserPlus" [styles]="{'color':'white'}"></fa-icon>
-      Regístrate</a>
+      <fa-icon [icon]="faUserPlus"></fa-icon>
+      Regístrate
+    </a>
+
     <a class="navbar-brand zo">
       <button class="zoom">
         <span><i class="fas fa-plus" ></i></span> /
         <span><i class="fas fa-minus"></i></span>
       </button>Zoom</a>
 
-
   </div>
 
-  <a class="navbar-brand sw float-right">
-    <button class="switch" id="switch">
-      <span><i class="fas fa-sun"></i></span>"
-      <span><i class="fas fa-moon"></i></span>
-    </button>
-  </a>
+  <button class="switch" id="switch">
 
+    <button class="zoom">
+      <span (click)="zoomPlus()"><i class="fas fa-plus" ></i></span> /
+      <span (click)="zoomMinus()"><i class="fas fa-minus"></i></span>
+    </button>
+    Zoom
+
+    <a class="navbar-brand sw" >
+      <button class="switch" id="switch" (click)="darkMode()">
+        <span><i class="fas fa-sun"></i></span>"
+        <span><i class="fas fa-moon"></i></span>
+      </button>
+    </a>
+  </button>
 
 </nav>
