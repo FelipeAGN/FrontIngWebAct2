@@ -1,11 +1,11 @@
 <nav class="navbar navbar-dark bg-dark" id="barraTitulo">
-  <a class="navbar-brand" href="#">Home
+  <a class="navbar-brand" routerLink="inicio">Home
     <fa-icon [icon]="faHome"></fa-icon>
   </a>
 
   <div>
 
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" routerLink="inicio">
       <fa-icon [icon]="faBookmark"></fa-icon>
       Artículos</a>
 
@@ -28,12 +28,15 @@
 
     <a class="navbar-brand" routerLink="signup" *ngIf="!LoggedIn">
       <fa-icon [icon]="faUserPlus"></fa-icon>
-      Regístrate</a>
+      Regístrate
+    </a>
     <a class="navbar-brand zo">
       <button class="zoom"> 
         <span (click)="zoomPlus()"><i class="fas fa-plus" ></i></span> /
         <span (click)="zoomMinus()"><i class="fas fa-minus"></i></span>
-      </button>Zoom</a>
+      </button>
+      Zoom
+    </a>
 
     <a class="navbar-brand sw" >
     <button class="switch" id="switch" (click)="darkMode()">
