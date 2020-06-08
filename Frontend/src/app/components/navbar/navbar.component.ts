@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {AuthService} from "../../Services/auth.service";
 import {Router} from "@angular/router";
 import {TokenService} from "../../Services/token.service";
 import {faCoffee, faHome,faSignInAlt, faUser,faSignOutAlt, faPlusSquare,faUserPlus, faBookmark} from "@fortawesome/free-solid-svg-icons";
-import { $ } from 'protractor';
-import { darkModeFooter } from "../footer/footer.component"
+import { darkModeFooter } from "../footer/footer.component";
+import { LoginComponent } from "../login/login.component"
+import { darkModeLogin } from "../login/login.component" ;
  
 @Component({
   selector: 'app-navbar',
@@ -22,7 +23,7 @@ export class NavbarComponent implements OnInit {
   faUserPlus = faUserPlus;
   faBookmark = faBookmark;
 
-  public LoggedIn: boolean;
+  public LoggedIn: boolean; 
 
   constructor(
     private Auth: AuthService,
@@ -49,14 +50,12 @@ export class NavbarComponent implements OnInit {
     document.querySelector('#barraTitulo').classList.toggle('bg-light');
   }
 
-  
-
   darkMode(){
+    document.querySelector('#switch').classList.toggle('active');
     document.head.classList.toggle('dark');
     document.body.classList.toggle('dark');
-    document.querySelector('#switch').classList.toggle('active');
     this.darkModeNavbar();
-    darkModeFooter();
+    darkModeFooter();   
   }
 
   tamano=100
@@ -77,3 +76,4 @@ export class NavbarComponent implements OnInit {
 
   
 }
+

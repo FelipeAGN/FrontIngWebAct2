@@ -46,5 +46,4 @@ export class SignupComponent implements OnInit {
   ErrorHandler(error){
     this.error= error.error.errors;
   }
-
 }

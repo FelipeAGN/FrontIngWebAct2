@@ -11,11 +11,8 @@
 .cuerpo{
   background-color: #14181c;
 }
-head.dark{
-  background-color:white;
-  color:black;
-}
+
 body.dark{
-  background-color:white;
+  background-color:#D7DCD5;
   color: black;
 }
