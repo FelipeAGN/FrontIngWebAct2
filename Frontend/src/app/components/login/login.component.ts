@@ -51,6 +51,3 @@ export class LoginComponent implements OnInit {
 
 }
 
-export function darkModeLogin(){
-  document.querySelector('#loginDark').classList.toggle('dark');
-}
