@@ -1,3 +1,9 @@
 .card{
     color: white;
 }
+.log{
+    margin-top: 76px !important;
+}
+.sectionSeparator{
+    height: 60px;
+}

@@ -32,28 +32,19 @@
       Regístrate
     </a>
 
+  </div>
+  <div>
     <a class="navbar-brand zo">
       <button class="zoom">
-        <span><i class="fas fa-plus" ></i></span> /
-        <span><i class="fas fa-minus"></i></span>
+        <span (click)="zoomPlus()"><i class="fas fa-plus" ></i></span> /
+        <span (click)="zoomMinus()"><i class="fas fa-minus"></i></span>
       </button>Zoom</a>
 
-  </div>
-
-  <button class="switch" id="switch">
-
-    <button class="zoom">
-      <span (click)="zoomPlus()"><i class="fas fa-plus" ></i></span> /
-      <span (click)="zoomMinus()"><i class="fas fa-minus"></i></span>
-    </button>
-    Zoom
-
-    <a class="navbar-brand sw" >
+      <a class="navbar-brand sw" >
       <button class="switch" id="switch" (click)="darkMode()">
         <span><i class="fas fa-sun"></i></span>"
         <span><i class="fas fa-moon"></i></span>
       </button>
     </a>
-  </button>
-
+  </div>
 </nav>
