@@ -15,4 +15,11 @@ export class JarwisService {
 
   changePassword(data){return this.http.post(`${this.baseUrl}/resetPassword`,data)}
 
+  newArticle(data){return this.http.post(`${this.baseUrl}/newArticle`,data)}
+/*
+  updateArticle(data){return this.http.post(`${this.baseUrl}/newArticle`,data)}
+  getArticle(data){return this.http.post(`${this.baseUrl}/getArticle`,data)}
+  deleteArticle(data){return this.http.post(`${this.baseUrl}/newArticle`,data)}*/
+
+
 }

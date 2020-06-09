@@ -24,6 +24,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IndexComponent } from './components/index/index.component';
 import { ArticuloComponent } from './components/articulo/articulo.component';
 import { ErrorComponent } from './components/error/error.component';
+import { NuevoArticuloComponent } from './components/articulo/nuevo-articulo/nuevo-articulo.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { ErrorComponent } from './components/error/error.component';
     IndexComponent,
     ArticuloComponent,
     ErrorComponent,
+    NuevoArticuloComponent,
   ],
   imports: [
     BrowserModule,

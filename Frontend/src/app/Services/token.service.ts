@@ -7,7 +7,7 @@ export class TokenService {
 
   handle(token){
     this.set(token);
-    console.log(token);
+    //console.log(token);
   }
 
   //here we save the token on local storage

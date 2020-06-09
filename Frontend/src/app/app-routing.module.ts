@@ -10,6 +10,7 @@ import {BeforeLoginService} from "./Services/before-login.service";
 import {AfterLoginService} from "./Services/after-login.service";
 import {RequestResetComponent} from "./components/password/request-reset/request-reset.component";
 import {IndexComponent} from "./components/index/index.component";
+import {NuevoArticuloComponent} from "./components/articulo/nuevo-articulo/nuevo-articulo.component";
 
 
 const appRoutes: Routes = [
@@ -24,7 +25,7 @@ const appRoutes: Routes = [
     path: 'login', component:LoginComponent,
     canActivate: [BeforeLoginService]
   },
-  
+
   {
     path: 'signup', component:SignupComponent,
     canActivate: [BeforeLoginService]
@@ -41,6 +42,10 @@ const appRoutes: Routes = [
   {
     path: 'response-password-reset', component:ResponseResetComponent,
     canActivate: [BeforeLoginService]
+  },
+  {
+    path: 'agregar-articulo', component: NuevoArticuloComponent,
+    canActivate: [AfterLoginService]
   },
   {
     path: '**', component:ErrorComponent,
