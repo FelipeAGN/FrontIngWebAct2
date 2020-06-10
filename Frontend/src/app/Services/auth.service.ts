@@ -5,6 +5,9 @@ import {TokenService} from "./token.service";
 @Injectable()
 export class AuthService {
 
+
+  constructor(private Token: TokenService) { }
+
   private LoggedIn = new BehaviorSubject<boolean>(this.Token.LoggedIn());
 
   AuthStatus=this.LoggedIn.asObservable();
@@ -13,5 +16,9 @@ export class AuthService {
     this.LoggedIn.next(value);
   }
 
-  constructor(private Token: TokenService) { }
+  saveLog(token: any){
+    localStorage.setItem('identity', this.Token.payload(token));
+  }
+
+  
 }
