@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-contacto',
+  selector: 'contacto',
   templateUrl: './contacto.component.html',
   styleUrls: ['./contacto.component.css']
 })
@@ -13,7 +13,7 @@ export class ContactoComponent implements OnInit {
    }
 
 
-  public form = {
+  public formulario = {
     email: null,
     subject: null,
     content: null
@@ -21,8 +21,8 @@ export class ContactoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubtit(form){
-    
+  onSubmit(form){
+    console.log(this.formulario);
   }
 
 }
