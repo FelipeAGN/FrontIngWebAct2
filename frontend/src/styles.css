@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+
+.ng-invalid:not(form){
+  border-right: 10px solid red;
+}
+
+.ng-valid:not(form){
+  border-right: 10px solid green;
+}
+.cuerpo{
+  background-color: #14181c;
+}
+
+body.dark{
+  background-color:#D7DCD5;
+  color: black;
+}
+
+body.dark app-login .card#loginDark{
+  background-color: white !important;
+  color: black;
+  font-weight: bold;
+}
+
+body.dark app-signup .card#signDark{
+  background-color: white !important;
+  color: black;
+  font-weight: bold;
+}
+
+/*       Titulos index      */
+body.dark app-index .titleIndex{
+  color: black !important;
+}
+
+
+/*    Barra Separadora   */
+body app-index .sectionSeparator{
+  background-color: #14181c !important;
+}
+body.dark app-index .sectionSeparator{
+  background-color: #D7DCD5 !important;
+}
+
+
+/*     Barra Lateral izquierda      */
+body .barraLateralS{
+  color:white;
+  border: white;
+}
+body.dark .barraLateralS{
+  background-color: white !important;
+  color: black;
+  border: black;
+}
+
+body.dark .barraLateralMini{
+  background-color: white !important;
+  border-color: black;
+}
+body.dark .barraLateralMini .card-header{
+  border-color: black !important;
+}
+
+body .barraLateralMini{
+  border-color: white;
+  background-color: #343a40;
+}
+body .barraLateralMini .card-header{
+  border-color: white !important;
+}
