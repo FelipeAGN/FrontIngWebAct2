@@ -25,6 +25,7 @@ import { IndexComponent } from './components/index/index.component';
 import { ArticuloComponent } from './components/articulo/articulo.component';
 import { ErrorComponent } from './components/error/error.component';
 import { NuevoArticuloComponent } from './components/articulo/nuevo-articulo/nuevo-articulo.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { NuevoArticuloComponent } from './components/articulo/nuevo-articulo/nue
     ArticuloComponent,
     ErrorComponent,
     NuevoArticuloComponent,
+    ContactoComponent,
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,7 @@ import {AfterLoginService} from "./Services/after-login.service";
 import {RequestResetComponent} from "./components/password/request-reset/request-reset.component";
 import {IndexComponent} from "./components/index/index.component";
 import {NuevoArticuloComponent} from "./components/articulo/nuevo-articulo/nuevo-articulo.component";
+import {ContactoComponent} from "./components/contacto/contacto.component";
 
 
 const appRoutes: Routes = [
@@ -46,6 +47,10 @@ const appRoutes: Routes = [
   {
     path: 'agregar-articulo', component: NuevoArticuloComponent,
     canActivate: [AfterLoginService]
+  },
+  {
+    path: 'contacto', component: ContactoComponent,
+    canActivate: [BeforeLoginService]
   },
   {
     path: '**', component:ErrorComponent,

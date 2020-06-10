@@ -1,0 +1,41 @@
+<div class="container-fluid">
+      <div class="sidenav bg-dark barraLateralS">
+
+        <div class="col-md-12 mt-8">
+            <h1>{{page_title}}</h1>
+            <p>¡Hola, comunícate con nosotros!</p>
+            <div class="row">
+                <form class="col-md-5" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="text" name="email" class="form-control" #email="ngModel" [(ngModel)]="form.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        <small *ngIf="!email.valid && email.touched" class="invalid-feedback d-block">
+                            E-mail invalido
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Asunto</label>
+                        <input type="text" name="subject" class="form-control" #subject="ngModel" [(ngModel)]="form.subject" required>
+                        <small *ngIf="!subject.valid && subject.touched" class="invalid-feedback d-block">
+                            Asunto invalida
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Mensaje:</label>
+                        <textarea type="text" name="content" class="form-control" rows="4"#content="ngModel" [(ngModel)]="form.content" required></textarea>
+                        <small *ngIf="!content.valid && content.touched" class="invalid-feedback d-block">
+                            Mensaje invalido
+                        </small>
+                    </div>
+                    <input type="submit" value="Ingresar" class="btn btn-success" [disabled]="contactForm.invalid">
+                </form>
+                <div class="col-md-6 text-right">
+                    <h3>Nuestra Oficina</h3>
+                    <p>Visita nuestras oficinas o envianos lo que quieras</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.1955787987704!2d-70.60883622066173!3d-33.4181450456902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf682f88c3ff%3A0xfde38530e178ef1c!2sAv.%20Andr%C3%A9s%20Bello%202425%2C%20Providencia%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1591800662319!5m2!1ses-419!2scl" width="300" height="225" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+            
+        </div>
+      </div>
+</div>
