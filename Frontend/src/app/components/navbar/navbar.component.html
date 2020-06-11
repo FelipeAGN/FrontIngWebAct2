@@ -10,6 +10,11 @@
       <fa-icon [icon]="faBookmark"></fa-icon>
       Artículos</a>
 
+    <a class="navbar-brand" routerLink="contacto">
+        <fa-icon [icon]="faEnvelope"></fa-icon>
+        Contacto
+    </a>
+
     <a class="navbar-brand" routerLink="agregar-articulo" *ngIf="LoggedIn">
       <fa-icon [icon]="faPlusCircle"></fa-icon>
       Nuevo Artículo</a>
@@ -44,7 +49,8 @@
       <button class="switch" id="switch" (click)="darkMode()">
         <span><i class="fas fa-sun"></i></span>"
         <span><i class="fas fa-moon"></i></span>
-      </button>
-    </a>
+      </button></a>
+     
+    
   </div>
 </nav>

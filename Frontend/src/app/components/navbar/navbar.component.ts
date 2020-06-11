@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import {AuthService} from "../../Services/auth.service";
 import {Router} from "@angular/router";
 import {TokenService} from "../../Services/token.service";
-import {faHome,faSignInAlt, faUser,faSignOutAlt, faPlusSquare,faUserPlus, faBookmark} from "@fortawesome/free-solid-svg-icons";
+import {faHome,faSignInAlt, faUser,faSignOutAlt, faPlusSquare,faUserPlus, faBookmark, faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import { darkModeFooter } from "../footer/footer.component";
 
 @Component({
@@ -19,6 +19,7 @@ export class NavbarComponent implements OnInit {
   faPlusCircle= faPlusSquare;
   faUserPlus = faUserPlus;
   faBookmark = faBookmark;
+  faEnvelope = faEnvelope;
 
   public LoggedIn: boolean;
 
